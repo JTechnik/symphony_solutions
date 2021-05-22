@@ -1,1 +1,22 @@
+#DB connection
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
+  application:
+    name: weather-application
+
+#Application config
+server:
+  servlet:
+    context-path: /api
+  port: 8701
+
+#Third party REST API integration
+application:
+  id: ${APP_ID:TBD}
+api:
+  weather:
+    get: "http://api.openweathermap.org/data/2.5/weather"
