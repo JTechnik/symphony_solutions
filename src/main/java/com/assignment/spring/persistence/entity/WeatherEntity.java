@@ -2,7 +2,15 @@ package com.assignment.spring.persistence.entity;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "weather")
@@ -14,9 +22,19 @@ public class WeatherEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "weather_seq_generator")
     private Integer id;
 
-    private String city;
+    @Column(name = "external_id")
+    private Integer externalId;
 
-    private String country;
+    @Column(name = "main")
+    private String main;
 
-    private Double temperature;
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "icon")
+    private String icon;
+
+    @ManyToOne
+    @JoinColumn(name = "weather_data_holder_id")
+    private WeatherDataHolderEntity weatherDataHolder;
 }

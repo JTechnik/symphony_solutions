@@ -19,4 +19,4 @@ application:
   id: ${APP_ID:TBD}
 api:
   weather:
-    get: "http://api.openweathermap.org/data/2.5/weather"
+    url: "http://api.openweathermap.org/data/2.5/weather"

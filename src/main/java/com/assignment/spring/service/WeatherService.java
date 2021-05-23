@@ -1,9 +1,9 @@
 package com.assignment.spring.service;
 
-import com.assignment.spring.persistence.entity.WeatherEntity;
+import com.assignment.spring.dto.WeatherDataHolderDto;
 
 public interface WeatherService {
-    //TODO WeatherEntity -> WeatherDTO
-    WeatherEntity getWeatherForCity(String city);
+
+    WeatherDataHolderDto getWeatherForCity(String city);
 
 }

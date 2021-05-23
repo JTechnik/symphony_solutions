@@ -3,6 +3,7 @@ package com.assignment.spring.api;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -12,15 +13,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "id",
-    "main",
-    "description",
-    "icon"
+        "id",
+        "main",
+        "description",
+        "icon"
 })
 public class Weather {
 
     @JsonProperty("id")
-    private Integer id;
+    private Integer externalId;
     @JsonProperty("main")
     private String main;
     @JsonProperty("description")
@@ -31,13 +32,13 @@ public class Weather {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")
-    public Integer getId() {
-        return id;
+    public Integer getExternalId() {
+        return externalId;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
+    public void setExternalId(Integer id) {
+        this.externalId = id;
     }
 
     @JsonProperty("main")

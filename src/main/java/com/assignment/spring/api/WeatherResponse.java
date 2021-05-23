@@ -4,6 +4,7 @@ package com.assignment.spring.api;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -13,18 +14,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "coord",
-    "weather",
-    "base",
-    "main",
-    "visibility",
-    "wind",
-    "clouds",
-    "dt",
-    "sys",
-    "id",
-    "name",
-    "cod"
+        "coord",
+        "weather",
+        "base",
+        "main",
+        "visibility",
+        "wind",
+        "clouds",
+        "dt",
+        "sys",
+        "id",
+        "name",
+        "cod"
 })
 public class WeatherResponse {
 
@@ -47,7 +48,7 @@ public class WeatherResponse {
     @JsonProperty("sys")
     private Sys sys;
     @JsonProperty("id")
-    private Integer id;
+    private Integer externalId;
     @JsonProperty("name")
     private String name;
     @JsonProperty("cod")
@@ -146,13 +147,13 @@ public class WeatherResponse {
     }
 
     @JsonProperty("id")
-    public Integer getId() {
-        return id;
+    public Integer getExternalId() {
+        return externalId;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
+    public void setExternalId(Integer id) {
+        this.externalId = id;
     }
 
     @JsonProperty("name")
