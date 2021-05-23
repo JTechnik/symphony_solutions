@@ -34,8 +34,8 @@ public class WeatherDataHolderEntity {
     @Column(name = "dt")
     private Integer dt;
 
-    @Column(name = "external_id")
-    private Integer externalId;
+    @Column(name = "city_id")
+    private Integer cityId;
 
     @Column(name = "visibility")
     private Integer visibility;

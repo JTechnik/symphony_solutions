@@ -16,7 +16,7 @@ public class WeatherDataHolderDto {
 
     private Integer dt;
 
-    private Integer externalId;
+    private Integer cityId;
 
     private Integer visibility;
 

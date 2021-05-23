@@ -4,7 +4,7 @@ CREATE TABLE weather_data_holder
     base            VARCHAR(255),
     name            VARCHAR(255) NOT NULL,
     dt              INT,
-    external_id     INT,
+    city_id         INT,
     visibility      INT,
     cod             INT,
     coord_lon       NUMERIC(5, 2),
