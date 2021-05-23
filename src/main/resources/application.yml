@@ -13,6 +13,8 @@ server:
   servlet:
     context-path: /api
   port: 8701
+  error:
+    include-message: always
 
 #Third party REST API integration
 application:
