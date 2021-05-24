@@ -1,0 +1,28 @@
+#DB connection
+spring:
+  datasource:
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+
+  application:
+    name: weather-application
+
+#Application config
+server:
+  servlet:
+    context-path: /api
+  port: 8701
+  error:
+    include-message: always
+
+#Third party REST API integration
+application:
+  id: ${APP_ID:TBD}
+api:
+  weather:
+    url: "http://api.openweathermap.org/data/2.5/weather"
+
+#Test config
+test:
+  city:
+    name: London
