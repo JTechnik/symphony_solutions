@@ -21,7 +21,7 @@ import java.util.Map;
 public class Weather {
 
     @JsonProperty("id")
-    private Integer cityId;
+    private Integer externalId;
     @JsonProperty("main")
     private String main;
     @JsonProperty("description")
@@ -32,13 +32,13 @@ public class Weather {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("id")
-    public Integer getCityId() {
-        return cityId;
+    public Integer getExternalId() {
+        return externalId;
     }
 
     @JsonProperty("id")
-    public void setCityId(Integer id) {
-        this.cityId = id;
+    public void setExternalId(Integer id) {
+        this.externalId = id;
     }
 
     @JsonProperty("main")

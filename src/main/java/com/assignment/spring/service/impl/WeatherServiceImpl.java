@@ -47,11 +47,10 @@ public class WeatherServiceImpl implements WeatherService {
         return weatherMapper.toWeatherDataHolderDto(savedWeatherDataHolderEntity);
     }
 
-
-    private WeatherResponse sendRequest(String city) {
+    @Override
+    public WeatherResponse sendRequest(String city) {
         UriComponentsBuilder uriComponentsBuilder = getUriComponentsBuilder(city);
         HttpHeaders httpHeaders = getHttpHeaders();
-
         ResponseEntity<WeatherResponse> result;
         try {
             log.info("[SendingRequestToThirdPartiApi] city: {}", city);

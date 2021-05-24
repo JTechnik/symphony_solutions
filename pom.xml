@@ -17,7 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <postgresql.version>42.2.8</postgresql.version>
-        <swagger.version>2.9.2</swagger.version>
+        <swagger.version>1.5.9</swagger.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
@@ -56,7 +56,7 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-ui</artifactId>
-            <version>1.5.8</version>
+            <version>${swagger.version}</version>
         </dependency>
         <!-- Mapstruct -->
         <dependency>
@@ -69,6 +69,12 @@
             <artifactId>mapstruct-processor</artifactId>
             <version>${mapstruct.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <!-- H2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
