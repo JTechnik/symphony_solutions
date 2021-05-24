@@ -1,9 +1,6 @@
 
 package com.assignment.spring.api;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -11,20 +8,24 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "coord",
-    "weather",
-    "base",
-    "main",
-    "visibility",
-    "wind",
-    "clouds",
-    "dt",
-    "sys",
-    "id",
-    "name",
-    "cod"
+        "coord",
+        "weather",
+        "base",
+        "main",
+        "visibility",
+        "wind",
+        "clouds",
+        "dt",
+        "sys",
+        "id",
+        "name",
+        "cod"
 })
 public class WeatherResponse {
 
@@ -47,7 +48,7 @@ public class WeatherResponse {
     @JsonProperty("sys")
     private Sys sys;
     @JsonProperty("id")
-    private Integer id;
+    private Integer cityId;
     @JsonProperty("name")
     private String name;
     @JsonProperty("cod")
@@ -146,13 +147,13 @@ public class WeatherResponse {
     }
 
     @JsonProperty("id")
-    public Integer getId() {
-        return id;
+    public Integer getCityId() {
+        return cityId;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCityId(Integer id) {
+        this.cityId = id;
     }
 
     @JsonProperty("name")

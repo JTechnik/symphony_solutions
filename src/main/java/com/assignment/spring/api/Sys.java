@@ -3,6 +3,7 @@ package com.assignment.spring.api;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -12,19 +13,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-    "type",
-    "id",
-    "message",
-    "country",
-    "sunrise",
-    "sunset"
+        "type",
+        "id",
+        "message",
+        "country",
+        "sunrise",
+        "sunset"
 })
 public class Sys {
 
     @JsonProperty("type")
     private Integer type;
     @JsonProperty("id")
-    private Integer id;
+    private Integer externalId;
     @JsonProperty("message")
     private Double message;
     @JsonProperty("country")
@@ -47,13 +48,13 @@ public class Sys {
     }
 
     @JsonProperty("id")
-    public Integer getId() {
-        return id;
+    public Integer getExternalId() {
+        return externalId;
     }
 
     @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
+    public void setExternalId(Integer id) {
+        this.externalId = id;
     }
 
     @JsonProperty("message")
